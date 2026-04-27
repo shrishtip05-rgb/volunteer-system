@@ -116,8 +116,7 @@ with tab4:
         else:
             st.info("No needs yet.")
 
-
-            st.divider()
+ st.divider()
 st.subheader("Danger Zone")
 if st.button("Clear All Data"):
     with open(VOLUNTEERS_FILE, "w", newline="") as f:
