@@ -4,7 +4,7 @@ import os
 
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDMaahTDVtdgcPwHbRDcfhPQG9nRUb74dM")
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel("gemini-2.0-flash")
 
 VOLUNTEERS_FILE = "volunteers.csv"
@@ -127,7 +127,6 @@ if st.button("Clear All Data"):
     st.success("All data cleared!")
 
 with tab5:
- with tab5:
     st.subheader("AI-Powered Insights")
     st.caption("Powered by Google Gemini AI")
     if st.button("Get AI Recommendations"):
